@@ -73,7 +73,7 @@ class BookTicketController
     public function bookingQRCode($reference)
     {
         $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http';
-        $baseUrl = $protocol . '://' . $_SERVER['HTTP_HOST'] . '/BTMS';
+        $baseUrl = $protocol . '://' . $_SERVER['HTTP_HOST'];
         $validityCheckUrl = $baseUrl . '/public/index.php?url=CheckValidity&reference=' . urlencode($reference);
 
         $qrCodeDataUrl = '';
