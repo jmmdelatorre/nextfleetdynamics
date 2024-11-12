@@ -5,6 +5,6 @@ return [
         'host' => 'localhost',
         'dbname' => 'core2_btms',
         'user' => 'core2_root',
-        'pass' => '',
+        'pass' => 'root',
     ],
 ];
