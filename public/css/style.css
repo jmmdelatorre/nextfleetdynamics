@@ -1,6 +1,25 @@
 /* public/css/style.css */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+body {
+  background-image: url("../assets/images/bus-background.jpg"); /* Ensure the path is correct */
+  background-size: cover; /* Makes the image cover the entire background */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-position: center; /* Centers the background image */
+  background-attachment: fixed; /* Keeps the background image fixed during scroll */
+}
+
+/* Ensure the table takes up 100% of the container's width */
+#terminalTable {
+  width: 100% !important; /* Ensures the table stretches to full width */
+}
+
+/* Bootstrap's table-responsive class ensures horizontal scrolling on small screens */
+.table-responsive {
+  width: 100%; /* Take up the full width of the container */
+  overflow-x: auto; /* Adds horizontal scrolling when necessary */
 }

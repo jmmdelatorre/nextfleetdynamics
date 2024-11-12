@@ -1,3 +1,32 @@
+# Ignore the storage logs
 /storage/logs/
+
+# Ignore vendor directory
 /vendor/
+
+# Ignore environment file
 .env
+
+# Node modules (if you are using npm)
+node_modules/
+
+# Ignore Bootstrap generated files if applicable
+public/css/
+public/js/
+
+# Log files
+*.log
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# IDE or editor specific files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Temporary files
+tmp/
+temp/

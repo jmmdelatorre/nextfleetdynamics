@@ -2,17 +2,29 @@
 // public/index.php
 
 require_once __DIR__ . '/../helpers/functions.php';
+$request = $_GET['url'] ?? 'LandingPage';
+logDebug($request);
 
-$request = $_GET['url'] ?? 'home';
+// Start session if it hasn't been started yet
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 
-switch ($request) {
-    case 'home':
-        require_once __DIR__ . '/../controllers/HomeController.php';
-        $controller = new HomeController();
-        $controller->index();
-        break;
-    default:
-        http_response_code(404);
-        echo "404 - Page Not Found";
-        break;
+// Initialize the master routes array
+$routes = [];
+
+// Load all route files dynamically from the routes directory
+foreach (glob(__DIR__ . '/../routes/*.php') as $routeFile) {
+    $moduleRoutes = require $routeFile;
+    $routes = array_merge($routes, $moduleRoutes);
+}
+
+// Execute the corresponding route function
+if (array_key_exists($request, $routes)) {
+    $routes[$request]();
+} else {
+    http_response_code(response_code: 404);
+    require_once __DIR__ . '/../controllers/LandingPageController.php';
+    $controller = new LandingPageController();
+    $controller->pageNotFound();
 }

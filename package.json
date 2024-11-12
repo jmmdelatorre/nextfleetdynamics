@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "jquery": "^3.7.1"
+  },
+  "devDependencies": {
+    "copyfiles": "^2.4.1"
+  },
+  "scripts": {
+    "copy-bootstrap": "copyfiles -u 1 node_modules/bootstrap/dist/**/* public/",
+    "copy-jquery": "copyfiles -u 1 node_modules/jquery/dist/* public/js/"
+  }
+}

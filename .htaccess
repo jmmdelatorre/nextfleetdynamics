@@ -1,0 +1,16 @@
+# Enable rewrite engine for public folder redirection
+
+RewriteEngine On
+
+# Redirect requests to public/index.php if trying to access the root
+
+RewriteCond %{REQUEST_URI} !^/public/
+RewriteRule ^(.\*)$ /public/$1 [L]
+
+# Disable directory listing globally
+
+Options -Indexes
+
+# Redirect access to sensitive folders to public/index.php
+
+RewriteRule ^(config|controllers|models|views|helpers|storage)/(.\*)$ /public/index.php [L]
