@@ -23,7 +23,6 @@ foreach (glob(__DIR__ . '/../routes/*.php') as $routeFile) {
 if (array_key_exists($request, $routes)) {
     $routes[$request]();
 } else {
-    http_response_code(response_code: 404);
     require_once __DIR__ . '/../controllers/LandingPageController.php';
     $controller = new LandingPageController();
     $controller->pageNotFound();
