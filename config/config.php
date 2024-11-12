@@ -3,8 +3,8 @@
 return [
     'db' => [
         'host' => 'localhost',
-        'dbname' => 'btms',
-        'user' => 'root',
+        'dbname' => 'core2_btms',
+        'user' => 'core2_root',
         'pass' => '',
     ],
 ];
