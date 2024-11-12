@@ -7,7 +7,7 @@
     <title><?php echo isset($title) ? htmlspecialchars($title) : 'Default Title'; ?></title>
 
     <!-- Include Bootstrap CSS -->
-    <link rel="stylesheet" href="../public/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../public/css/style.css">
 
     <!-- Include DataTables CSS from CDN -->
@@ -73,8 +73,8 @@
     </main>
 
     <!-- Include jQuery, Bootstrap JS, and DataTables JS -->
-    <script src="../public/js/jquery/dist/jquery.min.js"></script>
-    <script src="../public/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- Include DataTables and jQuery from CDN -->
     <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
