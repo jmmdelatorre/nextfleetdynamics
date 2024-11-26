@@ -32,7 +32,6 @@ include('main.php'); // Include the main layout
                     <div class="card-body">
                         <h3 style="color: white;">View Schedules</h3>
                         <p style="color: white;">Check out our bus schedules to find the best travel times.</p>
-                        <a href="index.php?url=ViewSchedules" class="btn btn-light">View Schedules</a>
                     </div>
                 </div>
             </div>
@@ -41,7 +40,6 @@ include('main.php'); // Include the main layout
                     <div class="card-body">
                         <h3 style="color: white;">User Accounts</h3>
                         <p style="color: white;">Manage your bookings and personal information.</p>
-                        <a href="index.php?url=UserAccount" class="btn btn-light">My Account</a>
                     </div>
                 </div>
             </div>
@@ -50,7 +48,6 @@ include('main.php'); // Include the main layout
                     <div class="card-body">
                         <h3 style="color: white;">Contact Us</h3>
                         <p style="color: white;">Have questions? Reach out to our customer service.</p>
-                        <a href="index.php?url=Contact" class="btn btn-light">Contact Us</a>
                     </div>
                 </div>
             </div>
