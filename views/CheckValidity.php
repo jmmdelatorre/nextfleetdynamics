@@ -23,7 +23,7 @@ include('main.php'); // Include the main layout
                         <li><strong>Date:</strong> <?php echo htmlspecialchars($checkValidity['date']); ?></li>
                         <li><strong>Time:</strong> <?php echo htmlspecialchars($checkValidity['time']); ?></li>
                         <li><strong>Quantity:</strong> <?php echo htmlspecialchars($checkValidity['quantity']); ?></li>
-                        <li><strong>Total Fare:</strong> <?php echo htmlspecialchars($checkValidity['fare']); ?></li>
+                        <li><strong>Total Fare:</strong> <?php echo htmlspecialchars((floatval($checkValidity['fare'] ?? 0.0) * floatval($checkValidity['quantity'] ?? 0.0))); ?></li>
                     </ul>
                     <p class="mb-0">Please present this QR code to the bus operator upon boarding.</p>
                 </div>
